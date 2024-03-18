@@ -1,0 +1,30 @@
+<p class="attention"> Radiolog is not activated! </p>
+<p> ------ </p>
+<p> Install the scripts »soundpistart.sh« and »soundpistop.sh« from the folder »skripts« and create services to use the radiolog.</p>
+<p> ------ </p>
+<h2> Copy scripts </h2>
+<p> ● Put the scripts »soundpistart.sh« and »soundpistop.sh« into the folder »/home/username/scripts/« by using Filezilla (you can use ssh as conection method).</p>
+<p> ------ </p>
+<h2> Creat the services </h2>
+<p> ● Open terminal and conect your desktop with the raspberry pi and do the following:</p>
+<p> ● create »soundpistart.service« and »soundpistop.service« with »sudo nano /lib/systemd/system/soundpistart.service«</p>
+<p> ● create »soundpistart.service« and »soundpistop.service« with »sudo nano /lib/systemd/system/soundpistart.service«</p>
+<p> ------ </p>
+<h2> Then make it executable:</h2>
+<p> ● »sudo chmod 644 /lib/systemd/system/soundpistart.service«</p>
+<p> ● »sudo chmod 644 /lib/systemd/system/soundpistop.service«</p>
+<p> ------ </p>
+<h2> Start the services </h2>
+<p> ● »sudo systemctl start soundpistart.service«</p>
+<p> ● »sudo systemctl start soundpistop.service«</p>
+<p> ------ </p>
+<h2> Check the services </h2>
+<p> ● »sudo systemctl status soundpistart.service«</p>
+<p> ● »sudo systemctl status soundpistop.service«</p>
+<p> ------ </p>
+<h2> Enable the services </h2>
+<p> ● »sudo systemctl enable soundpistart.service«</p>
+<p> ● »sudo systemctl enable soundpistop.service«</p>
+<p> ------ </p>
+<h2> Well done </h2>
+<p> Radiolog should work now. &#127881;</p>

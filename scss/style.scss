@@ -1,0 +1,252 @@
+/*
+
+
+ ██╗ ██╗ ██████╗ ██╗  ██╗                                     
+████████╗╚════██╗██║  ██║                                     
+╚██╔═██╔╝ █████╔╝███████║                                     
+████████╗ ╚═══██╗╚════██║                                     
+╚██╔═██╔╝██████╔╝     ██║                                     
+ ╚═╝ ╚═╝ ╚═════╝      ╚═╝                                     
+                                                              
+██╗    ██╗███████╗██████╗ ██████╗  █████╗ ██████╗ ██╗ ██████╗ 
+██║    ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║██╔═══██╗
+██║ █╗ ██║█████╗  ██████╔╝██████╔╝███████║██║  ██║██║██║   ██║
+██║███╗██║██╔══╝  ██╔══██╗██╔══██╗██╔══██║██║  ██║██║██║   ██║
+╚███╔███╔╝███████╗██████╔╝██║  ██║██║  ██║██████╔╝██║╚██████╔╝
+ ╚══╝╚══╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝ ╚═════╝ 
+                                                              
+                                             
++++++++++++++++++++++++++++++++++
++ #34 Webradio v0.01 - 15.03.24 +
++++++++++++++++++++++++++++++++++
+
+
+*/
+
+// ++++++++++++++++++++++++++
+// main things
+// ++++++++++++++++++++++++++
+
+// Wenn ein spash benötigt wird. (z.B aspect-ratio)
+// https://sass-lang.com/d/slash-div
+// Bsp:
+// $aspect-ratio-width: 3;
+// $aspect-ratio-height: 2;
+// $aspect-ratio-landscape: list.slash($aspect-ratio-width, $aspect-ratio-height);
+// $aspect-ratio-portrait: list.slash($aspect-ratio-height, $aspect-ratio-width);
+@use "sass:list";
+
+$colorOne: #d6d6d6;
+$colorTwo: #1a1b1e;
+$colorThree: #00d293;
+$colorFour: #d8a304;
+$colorFive: #ff0033;
+
+@font-face {
+    font-display: swap;
+    font-family: 'JetBrainsMono';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/JetBrainsMono-Thin.woff2') format('woff2');
+}
+
+label,
+p,
+a,
+span,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'JetBrainsMono', system-ui, -apple-system;
+    font-weight: 100;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    line-height: 1.9rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: $colorThree;
+}
+
+.attention{
+    color: $colorFive;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 16px;
+}
+
+// Wenn trotz meta-Tag Telefonnummern detektiert werden.
+// https://stackoverflow.com/questions/28027330/html-email-ios-format-detection
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+html {
+    //width: 100vw;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    //flex-direction: column;
+    color: $colorOne;
+    background-color: $colorTwo;
+    text-size-adjust: 100%;
+    //overflow-y: scroll;
+}
+
+#content-wrapper {
+    .systemd{
+        color: $colorFive!important;
+    }
+    .logwidth{
+        width: 100%!important;
+    }
+    width: 100%;
+
+    span {
+        padding: 1rem;
+        margin: 1rem 1rem 0rem 0;
+        display: inline-block;
+        border: 1px solid $colorOne;
+        border-radius: 2rem;
+        color: $colorOne;
+    }
+
+    a.button {
+        padding: 1rem;
+        margin: 1rem 1rem 0rem 0;
+        display: inline-block;
+        border: 1px solid $colorOne;
+        border-radius: 2rem;
+        color: $colorOne;
+        text-decoration: none;
+        transition: all 0.5s;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            border: 1px solid $colorOne;
+            color: $colorOne;
+        }
+
+        &:hover {
+            text-decoration: none;
+            border: 1px solid $colorFour;
+            color: $colorFour;
+        }
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        padding: 1rem 1rem 0 1rem;
+        background-color: $colorTwo;
+        width: 100%;
+        height: 220px;
+        .infobox {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 600px;
+            margin-top: 1rem;
+            border-bottom: 1px solid $colorOne;
+            border-top: 1px solid $colorOne;
+        }
+    }
+
+    main {
+        padding: 0 1rem 0 1rem;
+        display: flex;
+        //justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 260px;
+        padding-bottom: 1rem 0;
+        .controller {
+            width: 600px;
+            padding-bottom: 2rem;
+        }
+
+        label {
+            padding: 1rem;
+            margin: 1rem 1rem 0rem 0;
+            display: inline-block;
+            border: 1px solid $colorOne;
+            border-radius: 2rem;
+            color: $colorOne;
+            text-decoration: none;
+            transition: all 0.5s;
+    
+            &:link,
+            &:visited {
+                text-decoration: none;
+                border: 1px solid $colorOne;
+                color: $colorOne;
+            }
+    
+            &:hover {
+                text-decoration: none;
+                border: 1px solid $colorFour;
+                color: $colorFour;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #content-wrapper {
+        header {
+            .infobox {
+                width: 100%;
+            }
+        }
+
+        main {
+            .controller {
+                width: 100%;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,9 @@
+[Unit]
+Description=SoundPi Start Service
+After=multi-user.target
+ 
+[Service]
+ExecStart=/home/mike/scripts/soundpistart.sh &
+ 
+[Install]
+WantedBy=multi-user.target

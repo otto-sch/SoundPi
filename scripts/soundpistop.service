@@ -1,0 +1,12 @@
+[Unit]
+Description=SoundPi Stop Service
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/home/username/scripts/soundpistop.sh
+
+[Install]
+WantedBy=multi-user.target
+
