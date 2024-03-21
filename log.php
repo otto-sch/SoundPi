@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <!-- required meta tags -->
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
     <meta name="description" content="Pi Zero Webradio">
     <meta name="author" content="Otto">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="alternate icon" type="image/png" sizes="32x32"
         href="favicon/favicon-32x32.png">
@@ -20,10 +18,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
     <link rel="stylesheet" type="text/css" media="all" href="css/style.min.css">
-
-    <!-- title-->
     <title>Radiolog – #34SoundPi</title>
 </head>
 <body id="top">
