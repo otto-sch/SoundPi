@@ -3,7 +3,7 @@ Description=SoundPi Start Service
 After=multi-user.target
  
 [Service]
-ExecStart=/home/mike/scripts/soundpistart.sh &
+ExecStart=/usr/local/bin/scripts/soundpistart.sh &
  
 [Install]
 WantedBy=multi-user.target
