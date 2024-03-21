@@ -19,21 +19,12 @@
 +++++++++++++++++++++++++++++++++
 + #34 Webradio v0.01 - 15.03.24 +
 +++++++++++++++++++++++++++++++++
-
-
 */
 
 // ++++++++++++++++++++++++++
 // main things
 // ++++++++++++++++++++++++++
 
-// Wenn ein spash benötigt wird. (z.B aspect-ratio)
-// https://sass-lang.com/d/slash-div
-// Bsp:
-// $aspect-ratio-width: 3;
-// $aspect-ratio-height: 2;
-// $aspect-ratio-landscape: list.slash($aspect-ratio-width, $aspect-ratio-height);
-// $aspect-ratio-portrait: list.slash($aspect-ratio-height, $aspect-ratio-width);
 @use "sass:list";
 
 $colorOne: #d6d6d6;
@@ -105,8 +96,6 @@ h6,
     font-size: 16px;
 }
 
-// Wenn trotz meta-Tag Telefonnummern detektiert werden.
-// https://stackoverflow.com/questions/28027330/html-email-ios-format-detection
 a[x-apple-data-detectors] {
     color: inherit !important;
     text-decoration: none !important;
@@ -117,7 +106,6 @@ a[x-apple-data-detectors] {
 }
 
 html {
-    //width: 100vw;
     height: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -127,11 +115,9 @@ html {
 
 body {
     height: 100%;
-    //flex-direction: column;
     color: $colorOne;
     background-color: $colorTwo;
     text-size-adjust: 100%;
-    //overflow-y: scroll;
 }
 
 #content-wrapper {
@@ -198,7 +184,6 @@ body {
     main {
         padding: 0 1rem 0 1rem;
         display: flex;
-        //justify-content: center;
         flex-direction: column;
         align-items: center;
         padding-top: 260px;
