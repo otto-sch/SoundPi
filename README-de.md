@@ -1,7 +1,8 @@
 # SoundPi
-WebUI for a headless working Raspberry Pi Zero Webradio in combination with a HifiBerry miniAmp. 
+WebUI für ein Webradio  
+(headless Raspberry Pi Zero 2W mit HifiBerry miniAmp). 
 
-<p><img src="screenshot.png" alt="Screenshot" width="500px"></p>
+<p><img src="screenshot.png" alt="Screenshot" width="450px"> <img src="screenshot-2.jpg" alt="Screenshot" width="450px"></p>
 
 # Kurzanleitung
 
