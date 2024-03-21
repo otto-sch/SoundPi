@@ -2,7 +2,7 @@
 WebUI für ein Webradio  
 (headless Raspberry Pi Zero 2W mit HifiBerry miniAmp). 
 
-<p><img src="screenshot.png" alt="Screenshot" width="450px"> <img src="screenshot-2.jpg" alt="Screenshot" width="450px"></p>
+<p><img src="screenshot.png" alt="Screenshot" width="350px"> <img src="screenshot-2.jpg" alt="Screenshot" width="350px"></p>
 
 # Kurzanleitung
 
@@ -42,7 +42,7 @@ Alle Schritte kurz und knapp zusammengefasst.
 ## Software installieren
 
 * Desktop per `ssh` mit dem Pi verbinden.
-* [link https://github.com/dtcooper/raspotify;Raspotify] am einfachsten mit dem Installationsskript installieren.
+* [Raspotify](https://github.com/dtcooper/raspotify) am einfachsten mit dem Installationsskript installieren.
 * Webserver und Player installieren mit: `sudo apt-get install apache2 php mpd mpc alsa-utils -y`
 
 ## mpc/mpd einstellen
