@@ -121,13 +121,26 @@ body {
 }
 
 #content-wrapper {
+    width: 100%;
+
     .systemd{
         color: $colorFive!important;
     }
+
     .logwidth{
         width: 100%!important;
+        a{
+            color: $colorOne;
+        }
     }
-    width: 100%;
+    .logheight{
+        padding-top: 1rem;
+    }
+    #radiolog{
+        min-width: 1400px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+    }
 
     span {
         padding: 1rem;
@@ -218,6 +231,8 @@ body {
         }
     }
 }
+
+
 
 @media only screen and (max-width:600px) {
     #content-wrapper {

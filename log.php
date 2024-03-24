@@ -23,15 +23,7 @@
 </head>
 <body id="top">
     <div id="content-wrapper">
-        <header>
-            <div class="infobox logwidth">
-                <h1>What’s Up?</h1>
-                <div id="load-title">
-                    <p>loading ...</p>
-                </div>
-            </div>
-        </header>
-        <main>
+        <main class="logheight">
             <div class="controller logwidth" >
                 <h1>Radiolog:</h1>
                 <div id="radiolog"></div>
@@ -51,7 +43,6 @@
         function ()
         {
            $('#radiolog').load('php/radiolog.php').fadeIn("slow");
-           $('#load-title').load('php/title.php').fadeIn("slow");
         }, 2000); // refresh page every 2 seconds
     </script>
 </body>

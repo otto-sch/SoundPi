@@ -120,6 +120,17 @@ body {
 #content-wrapper .logwidth {
   width: 100% !important;
 }
+#content-wrapper .logwidth a {
+  color: #d6d6d6;
+}
+#content-wrapper .logheight {
+  padding-top: 1rem;
+}
+#content-wrapper #radiolog {
+  min-width: 1400px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
 #content-wrapper span {
   padding: 1rem;
   margin: 1rem 1rem 0rem 0;
