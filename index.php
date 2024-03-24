@@ -84,7 +84,7 @@
             </div>
             <div class="controller" >
                 <h2>Radiolog</h2>
-                <a class="button" href="log.php" target="_blank">Radiolog</a>
+                <a class="button" href="log.php">Radiolog</a>
             </div>
         </main>
     </div>
