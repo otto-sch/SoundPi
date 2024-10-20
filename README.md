@@ -33,7 +33,7 @@ Alle Schritte kurz und knapp zusammengefasst.
 
 ## HifiBerry MiniAmp aktivieren
 
-* Konfigurationsdatei öffnen mit: `sudo nano /boot/config.txt`
+* Konfigurationsdatei öffnen mit: `sudo nano /boot/firmware/config.txt`
 * `dtparam=audio=on`  -->  `# dtparam=audio=on`
 *  `dtoverlay=hifiberry-dac` eintragen.
 *  Speichern und Nano beenden mit: `Strg+s` und `Strg+x`
@@ -87,9 +87,12 @@ audio_output {
 * Berechtigungen ändern: `sudo find  -type d -exec chmod 775 {} \;` (innerhalb /var/www/html/)
 * Berechtigungen ändern: `sudo find  -type f -exec chmod 664 {} \;` (innerhalb /var/www/html/)
 * Shutdown über WebUI erlauben:`sudo visudo` und `www-data ALL = NOPASSWD: /sbin/shutdown` eintragen.
-*  Speichern und Nano beenden mit: `Strg+s` und `Strg+x`.
-*  Playlist/Senderliste laden mit: `mpc load station`
-*  Lautstärke von 100% auf 15% stellen:`mpc volume 15`
+* Speichern und Nano beenden mit: `Strg+s` und `Strg+x`.
+* Mpd/mpc soll automatisch starten: `sudo systemctl enable mpd`
+* Mpd/mpc jetzt starten: `sudo systemctl start mpd`
+* Playlist/Senderliste laden mit: `mpc load station`
+* Lautstärke von 100% auf 15% stellen:`mpc volume 15`
+* Test: `mpc play 1`
 * `sudo reboot`
 * Mit der IP von dem Raspberry Pi kann nun die WebUI aufgerufen werden.
 
