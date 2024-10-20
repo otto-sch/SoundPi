@@ -91,7 +91,7 @@ audio_output {
 * Mpd/mpc soll automatisch starten: `sudo systemctl enable mpd`
 * Mpd/mpc jetzt starten: `sudo systemctl start mpd`
 * Playlist/Senderliste laden mit: `mpc load station`
-* Lautstärke von 100% auf 15% stellen:`mpc volume 15`
+* Lautstärke von 100% auf 15% stellen: `mpc volume 15`
 * Test: `mpc play 1`
 * `sudo reboot`
 * Mit der IP von dem Raspberry Pi kann nun die WebUI aufgerufen werden.
